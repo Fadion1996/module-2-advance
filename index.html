@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Moudule-2-js</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    // 1 task
+      let taba = 0;
+      let sharm = 0;
+      let hurgada = 0;
+      const prom = prompt('Enter number 1 - taba, 2 - sharm, 3 - hurgada');
+
+      function isInt(n) {
+        return n % 1 === 0;
+      }
+
+      if (prom == 1) {
+        taba = prom;
+        console.log(`You choose ${taba} number, it\'s taba`);
+      } else if (prom == 2) {
+        sharm = prom;
+        console.log(`You choose ${sharm} number, it\'s sharm`);
+      } else if (prom == 3) {
+        hugarda = prom;
+        console.log(`You choose ${hurgada} number, it\'s hurgada`);
+      } else if (prom > 3 && prom < 1) {
+        console.log('You enter wrong number!');
+      } else if (Number.isInteger(prom) === false) {
+        console.log('You enter word, please enter number!');
+      } else if (prom === ''){
+        console.log('Enter number 1, 2 or 3');
+      } else {
+        console.log('It\'s not a number');
+      }
+      // 2 task
+      const numb = prompt('Enter number of group members');
+      if (isInt(numb) === false) {
+        console.log('You enter float number, please enter Int number!');
+      } else if (numb < 6 && numb > 0) {
+        taba = numb;
+        result = confirm(`In taba group have ${taba} users. Join to this group?`);
+        if (result === true){
+          taba++;
+          console.log(`Congrats! Now you are ${taba} user in taba!`);
+        } else {
+          console.log(`Choose another group`);
+          sharm = numb;
+          result = confirm(`In sharm group have ${sharm} users. Join to this group?`);
+          if (result === true){
+            sharm++;
+            console.log(`Congrats! Now you are ${sharm} user in sharm!`);
+          } else {
+            console.log(`Choose another group`);
+            sharm = numb;
+            result = confirm(`In sharm group have ${sharm} users. Join to this group?`);
+            if (result === true){
+              hurgada++;
+              console.log(`Congrats! Now you are ${hurgada} user in hurgada!`);
+            } else {
+              alert('You didn\'t choose any group!');
+            }
+          }
+        }
+      } else if (numb < 15 && numb > 6) {
+        sharm = numb;
+        result = confirm(`In sharm group have ${sharm} users. Join to this group?`);
+        if (result === true){
+          sharm++;
+          console.log(`Congrats! Now you are ${sharm} user in sharm!`);
+        } else {
+          console.log(`Choose another group`);
+          hurgada = numb;
+          result = confirm(`In sharm group have ${sharm} users. Join to this group?`);
+          if (result === true){
+            hurgada++;
+            console.log(`Congrats! Now you are ${hurgada} user in hurgada!`);
+          } else {
+            alert('You didn\'t choose any group!');
+          }
+        }
+      } else if (numb < 25 && numb > 15) {
+        hurgada = numb;
+        result = confirm(`In hurgada group have ${hurgada} users. Join to this group?`);
+        if (result === true){
+          hurgada++;
+          console.log(`Congrats! Now you are ${hurgada} user in hurgada!`);
+        } else {
+          alert('You didn\'t choose any group!');
+        }
+      }
+
+
+    </script>
+  </body>
+</html>
